@@ -34,3 +34,4 @@
                     ![alt text](/ACTIVITAT_9/provaBodyNested/dict.png)
                     Si ho fem correctament amb int i float:
                     
+                    ![alt text](image.png)
