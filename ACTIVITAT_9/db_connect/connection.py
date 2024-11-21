@@ -1,5 +1,6 @@
 import psycopg2 as psy
 
+#conexió a la db
 def conexio():
     try:
             conn = psy.connect(
@@ -10,9 +11,8 @@ def conexio():
                 port="5432"
             )
 
-            connection = conn.cursor()
-            print(connection)
-            return conn, connection
+            conection = conn.cursor()
+            return conn
 
     except (Exception, psy.Error) as error:
         print("Error",error)
