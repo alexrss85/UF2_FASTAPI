@@ -35,3 +35,15 @@
                     Si ho fem correctament amb int i float:
                     
                     ![alt text](image.png)
+
+
+8 - Documentaió
+
+    1-L'arxiu connection.py s'encarrega d'establir la conexió amb la base de dades. Aquí tenim la taula users:
+        ![alt text](/ACTIVITAT_9/img/pgadmin.png)
+    2- L'arxiu crud_users conté el metode readUsers() que envia una consulta sql a la base de dades que retorna el llistat d'usuaris dins la taula users.
+    3- L'arxiu users_sch.py conté dos mètodes amb les següents funcions:
+        user_schema:  Agafa un usuari i tranforma les dades en json.
+        users_schema:  Agafa la llista d'usuaris que retorna el readUsers, tranformant cadascun a json mitjançant el mètode anterior. Aquest metode retorna una llista de diccionaris(json) amb tots el usuaris.
+    4 - En el main.py tenim la fastapi on amb el mètode get amb endpoint /users que crida els metodes de users_sch.py i retorna la llista json d'usuaris:
+        ![alt text](/ACTIVITAT_9/img/getPostman.png)
