@@ -10,6 +10,6 @@ print(llista)
 for x in range(0,len(llista),2):
     paraula = llista[x]
     tematica = llista[x+1]
-    cursor.execute('''insert into paraules_db (paraula,tematica) values ('''+paraula+''','''+tematica+''')''')
+    cursor.execute("insert into paraules_db values (%s, %s)", (paraula, tematica))
 conn.commit()
 
