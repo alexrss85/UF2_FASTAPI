@@ -10,10 +10,9 @@ def conexio():
                 host="localhost",
                 port="5432"
             )
-
-            conection = conn.cursor()
             return conn
 
     except (Exception, psy.Error) as error:
         print("Error",error)
         return(None,None)
+    

@@ -1,11 +1,11 @@
 from db_connection import connection
-from insertData import script_csv
+from insertData import script_insert
 
 conn = connection.conexio()
 
 cursor = conn.cursor()
 
-llista = script_csv.llistaParaules()
+llista = script_insert.llistaParaules()
 print(llista)
 for x in range(0,len(llista),2):
     paraula = llista[x]
