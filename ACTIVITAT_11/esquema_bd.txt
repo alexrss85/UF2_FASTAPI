@@ -1,0 +1,5 @@
+- usuari: id, nomUsuari, dadesJugador(puntu)
+- paraules: paraula, tematica
+- info: id_html text
+- registrePartida: Id, id_Jugador, dadesPartida, 
+- abecedari: idioma , text
