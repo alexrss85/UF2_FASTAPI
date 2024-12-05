@@ -1,10 +1,10 @@
 from typing import List
 from fastapi import FastAPI
-from text_sch import text_schema
+from text_sch import text_schema,user_schema
 
 
 from conection import conexio
-from read import readTitol,readBoto,readImatge,readAbc
+from read import readTitol,readBoto,readImatge,readAbc,readUser,readIntents
 
 app = FastAPI()
 
@@ -25,8 +25,11 @@ async def read_Imatge():
     
 
 
+@app.get(path="/penjat/idiomes/{lang}")
+async def read_Abecedari(lang: str):
+    return (text_schema(readAbc(conn,lang)))
 
-@app.get(path="/penjat/lang/{idioma}")
-async def read_Abecedari(idioma: str):
-    return (text_schema(readAbc(conn,idioma)))
 
+@app.get(path="/penjat/user/{id}")
+async def read_User(id: str):
+    return (user_schema(readUser(conn,id)))

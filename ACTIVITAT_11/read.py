@@ -20,6 +20,12 @@ def readImatge(conn):
     res=cursor.fetchone()
     return res
 
+def readIntents(conn):
+    cursor = conn.cursor()
+    cursor.execute('''SELECT intents FROM partida;''')
+    intents=cursor.fetchone()
+    return intents
+
 
 
 def readAbc(conn,idioma):
@@ -28,6 +34,12 @@ def readAbc(conn,idioma):
     abc = cursor.fetchone()
     return abc
 
+def readUser(conn,id):
+    cursor = conn.cursor()
+    cursor.execute('''select * from infoUser where id_jugador=%s;''',(id,))
+    user = cursor.fetchone()
+    print(user)
+    return user
 
 
 
