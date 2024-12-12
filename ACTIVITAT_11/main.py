@@ -23,7 +23,7 @@ async def read_Titol():
 async def read_Imatge():
     return(text_sch.text_intents(read.updateIntents(conn)))
     
-# Retorna idioma que volguem segons parametre(catala,castella,etc)
+# Retorna l'idioma que volguem segons parametre(catala,castella,etc)
 @app.get(path="/penjat/idiomes/{lang}")
 async def read_Abecedari(lang: str):
     return (text_sch.text_schema(read.readAbc(conn,lang)))
